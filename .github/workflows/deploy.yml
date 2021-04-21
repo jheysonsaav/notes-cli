@@ -8,22 +8,6 @@ on:
       - "v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+"
       - "v[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+"
 jobs:
-  cargo-publish:
-    name: Publish Cargo Package
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Install Rust Toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
-
-      - name: Publish
-        run: for crate in crates/*/; do (cd "$crate" && cargo publish --token ${{ secrets.CRATES_IO_TOKEN && sleep 20 }} && cd ../..); done
 
   build-release:
     name: Build Release (${{ matrix.target }})
