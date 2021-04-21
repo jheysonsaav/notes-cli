@@ -21,33 +21,13 @@ jobs:
             os: ubuntu-latest
             name: notes-x86_64-unknown-linux-gnu.zip
 
-          - target: x86_64-unknown-linux-musl
-            os: ubuntu-latest
-            name: notes-x86_64-unknown-linux-musl.zip
-
-          - target: i686-unknown-linux-gnu
-            os: ubuntu-latest
-            name: notes-i686-unknown-linux-gnu.zip
-
-          - target: i686-unknown-linux-musl
-            os: ubuntu-latest
-            name: notes-i686-unknown-linux-musl.zip
-
           - target: aarch64-unknown-linux-gnu
             os: ubuntu-latest
             name: notes-aarch64-unknown-linux-gnu.zip
 
-          - target: aarch64-unknown-linux-musl
-            os: ubuntu-latest
-            name: notes-aarch64-unknown-linux-musl.zip
-
           - target: arm-unknown-linux-gnueabihf
             os: ubuntu-latest
             name: notes-arm-unknown-linux-gnueabihf.zip
-
-          - target: arm-unknown-linux-musleabihf
-            os: ubuntu-latest
-            name: notes-arm-unknown-linux-musleabihf.zip
 
           - target: x86_64-apple-darwin
             os: macOS-latest
@@ -68,10 +48,6 @@ jobs:
           - target: aarch64-pc-windows-msvc
             os: windows-latest
             name: notes-aarch64-pc-windows-msvc.zip
-
-          - target: x86_64-unknown-freebsd
-            os: ubuntu-latest
-            name: notes-x86_64-unknown-freebsd.zip
 
     steps:
       - name: Checkout
