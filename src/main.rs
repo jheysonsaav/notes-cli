@@ -3,6 +3,7 @@ use commands::{Command, NewCommand};
 
 mod commands;
 mod dirs;
+mod notes;
 
 fn main() {
     let app = App::new("notes")

@@ -15,4 +15,5 @@ colored = "2.0.0"
 serde = { version = "1.0.125", features = ["derive"] }
 directories = "3.0.1"
 serde_yaml = "0.8.17"
+chrono = { version = "0.4.19", features = ["serde"] }
 uuid = { version = "0.8.2", features = ["serde", "v4"] }
