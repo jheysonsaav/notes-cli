@@ -3,7 +3,7 @@ mod new;
 use clap::{App, ArgMatches};
 pub use new::NewCommand;
 
-pub trait Command<'a, 'b> {
-    fn command() -> App<'a, 'b>;
+pub trait Command {
+    fn command() -> App<'static, 'static>;
     fn setup(args: &ArgMatches);
 }

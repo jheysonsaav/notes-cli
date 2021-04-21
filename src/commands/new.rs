@@ -18,8 +18,8 @@ pub struct NoteYaml {
     body: Option<String>,
 }
 
-impl<'a, 'b> Command<'a, 'b> for NewCommand {
-    fn command() -> App<'a, 'b> {
+impl Command for NewCommand {
+    fn command() -> App<'static, 'static> {
         SubCommand::with_name("new")
             .about("Create new note")
             .arg(
