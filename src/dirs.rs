@@ -14,11 +14,13 @@ impl NotesDirs {
     pub fn load() -> Self {
         if let Some(dirs) = ProjectDirs::from("com", "jheysonsaav", "notes") {
             if !dirs.config_dir().exists() {
-                create_dir_all(dirs.config_dir()).expect("Cannot create config directory");
+                create_dir_all(dirs.config_dir())
+                    .expect("Cannot create config directory");
             }
 
             if !dirs.data_dir().exists() {
-                create_dir_all(dirs.data_dir()).expect("Cannot create data directory");
+                create_dir_all(dirs.data_dir())
+                    .expect("Cannot create data directory");
             }
 
             Self {
@@ -33,6 +35,7 @@ impl NotesDirs {
         }
     }
 
+    #[allow(dead_code)]
     pub fn config_dir(&self) -> &Path {
         self.config_dir.as_path()
     }
